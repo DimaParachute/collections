@@ -56,18 +56,21 @@ class SetViewController: UIViewController, UITextFieldDelegate {
     @IBAction func allMatchingLettersButtonPressed(_ sender: Any) {
         self.view.endEditing(true)
         matchingLettersLabel.isHidden = false
-        matchingLettersLabel.text = setManipulator.matchingLetters()
+        setManipulator.matchingLetters()
+        matchingLettersLabel.text = setManipulator.resOfMatchingLetters
     }
     
     @IBAction func allNotMatchingLettersButtonPressed(_ sender: Any) {
         self.view.endEditing(true)
         notMatchingLettersLabel.isHidden = false
-        notMatchingLettersLabel.text = setManipulator.notMatchingLetters()
+        setManipulator.notMatchingLetters()
+        notMatchingLettersLabel.text = setManipulator.resOfNotMatchingLetters
     }
     
     @IBAction func uniqueCharactersButtonPressed(_ sender: Any) {
         self.view.endEditing(true)
         uniqueCharactersLabel.isHidden = false
-        uniqueCharactersLabel.text = setManipulator.notMatchingFromFirstTextField()
+        setManipulator.notMatchingFromFirstTextField()
+        uniqueCharactersLabel.text = setManipulator.resOfNotMatchingFromFirstTF
     }
 }

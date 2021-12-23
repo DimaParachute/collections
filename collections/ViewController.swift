@@ -16,20 +16,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     lazy var dictionaryViewController = self.storyboard?.instantiateViewController(withIdentifier: "DictionaryViewController") as! DictionaryViewController
     
     //MARK:- IBOutlets
-    @IBOutlet weak var typeOfCollection: UITableView!
+    @IBOutlet weak var collectionTypesTableView: UITableView!
     
     //MARK:- Default values
-    let cells = ["Array", "Set", "Dictionary"]
+    let collectionTypes = ["Array", "Set", "Dictionary"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.typeOfCollection.delegate = self
-        self.typeOfCollection.dataSource = self
+        self.collectionTypesTableView.delegate = self
+        self.collectionTypesTableView.dataSource = self
     }
     
     //MARK:- UITableView methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cells.count
+        return collectionTypes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: "collectiontable")
         }
-        cell?.textLabel?.text = cells[indexPath.row]
+        cell?.textLabel?.text = collectionTypes[indexPath.row]
         return cell!
     }
 
