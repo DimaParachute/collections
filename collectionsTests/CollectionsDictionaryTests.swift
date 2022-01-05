@@ -18,17 +18,17 @@ class CollectionsDictionaryTests: XCTestCase {
         dictionaryManipulator.contactDictionaryGenetor()
         XCTAssertEqual(dictionaryManipulator.contactDictionary.count, 10000000)
         dictionaryManipulator.findTheFirstContactArray()
-        XCTAssertEqual(dictionaryManipulator.resOfFinTheFirConArr, "Name0")
+        XCTAssertEqual(dictionaryManipulator.resultOfFindingTheFirstContactArray, "Name0")
         dictionaryManipulator.findTheFirstContactDictionary()
-        XCTAssertEqual(dictionaryManipulator.resOfFinTheFirConDic, "Name0")
+        XCTAssertEqual(dictionaryManipulator.resultOfFindingTheFirstContactDictionary, "Name0")
         dictionaryManipulator.findTheLastContactArray()
-        XCTAssertEqual(dictionaryManipulator.resOfFinTheLasConArr, "Name9999999")
+        XCTAssertEqual(dictionaryManipulator.resultOfFindingTheLastContactArray, "Name9999999")
         dictionaryManipulator.findTheLastContactDictionary()
-        XCTAssertEqual(dictionaryManipulator.resOfFinTheLasConDic, "Name9999999")
+        XCTAssertEqual(dictionaryManipulator.resultOfFindingTheLastContactDictionary, "Name9999999")
         dictionaryManipulator.searchForANonExistingElementArray()
-        XCTAssertEqual(dictionaryManipulator.resOfSeaForANonExiEleArr, "0")
+        XCTAssertEqual(dictionaryManipulator.resultOfSearchingForANonExistingElementArray, "0")
         dictionaryManipulator.searchForANonExistingElementDictionary()
-        XCTAssertEqual(dictionaryManipulator.resOfSeaForANonExiEleDic, "0")
+        XCTAssertEqual(dictionaryManipulator.resultOfSearchingForANonExistingElementDictionary, "0")
     }
     
     func testPerformance() throws {

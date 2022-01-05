@@ -18,11 +18,14 @@ class SetViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var matchingLettersLabel: UILabel!
     @IBOutlet weak var notMatchingLettersLabel: UILabel!
     @IBOutlet weak var uniqueCharactersLabel: UILabel!
+    @IBOutlet weak var uniqueCharactersButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.firstTextField.delegate = self
-        self.secondTextField.delegate = self
+        firstTextField.delegate = self
+        secondTextField.delegate = self
+        uniqueCharactersButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        uniqueCharactersButton.titleLabel?.minimumScaleFactor = 0.5
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,20 +60,20 @@ class SetViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         matchingLettersLabel.isHidden = false
         setManipulator.matchingLetters()
-        matchingLettersLabel.text = setManipulator.resOfMatchingLetters
+        matchingLettersLabel.text = setManipulator.resultOfMatchingLetters
     }
     
     @IBAction func allNotMatchingLettersButtonPressed(_ sender: Any) {
         self.view.endEditing(true)
         notMatchingLettersLabel.isHidden = false
         setManipulator.notMatchingLetters()
-        notMatchingLettersLabel.text = setManipulator.resOfNotMatchingLetters
+        notMatchingLettersLabel.text = setManipulator.resultOfNotMatchingLetters
     }
     
     @IBAction func uniqueCharactersButtonPressed(_ sender: Any) {
         self.view.endEditing(true)
         uniqueCharactersLabel.isHidden = false
         setManipulator.notMatchingFromFirstTextField()
-        uniqueCharactersLabel.text = setManipulator.resOfNotMatchingFromFirstTF
+        uniqueCharactersLabel.text = setManipulator.resultOfNotMatchingLettersFromFirstTextField
     }
 }

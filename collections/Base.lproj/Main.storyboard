@@ -151,6 +151,7 @@
                         <outlet property="matchingLettersLabel" destination="Dc3-xJ-23I" id="B13-T9-TSD"/>
                         <outlet property="notMatchingLettersLabel" destination="Pxr-j5-xYz" id="dwg-E9-diC"/>
                         <outlet property="secondTextField" destination="XZ5-Lr-jOI" id="ysh-gB-2aD"/>
+                        <outlet property="uniqueCharactersButton" destination="gwU-go-5PN" id="eOw-6Y-lWd"/>
                         <outlet property="uniqueCharactersLabel" destination="kWf-sK-TNr" id="TpB-GD-pv0"/>
                     </connections>
                 </viewController>
@@ -182,24 +183,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RIa-AC-eNU">
-                                <rect key="frame" x="0.0" y="130" width="414" height="465"/>
+                                <rect key="frame" x="0.0" y="130" width="414" height="435"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="465" id="SW6-Ju-wV6"/>
+                                    <constraint firstAttribute="height" constant="435" id="SW6-Ju-wV6"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="snt-i2-rKY">
-                                    <size key="itemSize" width="155" height="155"/>
-                                    <size key="estimatedItemSize" width="155" height="155"/>
+                                    <size key="itemSize" width="155" height="145"/>
+                                    <size key="estimatedItemSize" width="155" height="145"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dictionaryOptionCell" id="Rnl-8G-oEt" customClass="DictionaryOptionsCollectionViewCell" customModule="collections" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="145"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CDS-Yg-jNj">
-                                            <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="155" height="145"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cellLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xk-hx-Fgb">
@@ -210,7 +211,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Rur-l7-Ics">
-                                                    <rect key="frame" x="67.5" y="67.5" width="20" height="20"/>
+                                                    <rect key="frame" x="67.5" y="62.5" width="20" height="20"/>
                                                 </activityIndicatorView>
                                             </subviews>
                                             <constraints>
@@ -244,7 +245,7 @@
                         <outlet property="arrAndDictCreatingActivityIndicator" destination="oRP-xV-EQD" id="sGi-og-xJe"/>
                         <outlet property="arrayLabel" destination="l8w-go-Unp" id="mnC-pM-haC"/>
                         <outlet property="dictionaryLabel" destination="o1W-EG-W6F" id="hVI-82-gmc"/>
-                        <outlet property="dictionaryManipulationOptionsCollection" destination="RIa-AC-eNU" id="fDi-MS-Ur3"/>
+                        <outlet property="dictionaryManipulationOptionsCollectionView" destination="RIa-AC-eNU" id="fDi-MS-Ur3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Llm-io-MZm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

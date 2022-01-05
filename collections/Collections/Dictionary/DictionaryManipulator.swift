@@ -11,12 +11,12 @@ struct DictionaryManipulator {
     var contactArray = [String]()
     var contactDictionary = [String: String]()
     
-    var resOfFinTheFirConArr = ""
-    var resOfFinTheFirConDic = ""
-    var resOfFinTheLasConArr = ""
-    var resOfFinTheLasConDic = ""
-    var resOfSeaForANonExiEleArr = ""
-    var resOfSeaForANonExiEleDic = ""
+    var resultOfFindingTheFirstContactArray = ""
+    var resultOfFindingTheFirstContactDictionary = ""
+    var resultOfFindingTheLastContactArray = ""
+    var resultOfFindingTheLastContactDictionary = ""
+    var resultOfSearchingForANonExistingElementArray = ""
+    var resultOfSearchingForANonExistingElementDictionary = ""
     
     mutating func contactArrayGenerator() {
         var i = 0
@@ -36,27 +36,23 @@ struct DictionaryManipulator {
     
     mutating func findTheFirstContactArray() {
         let result = contactArray[0]
-        print(result)
-        resOfFinTheFirConArr = result
+        resultOfFindingTheFirstContactArray = result
         
     }
     
     mutating func findTheFirstContactDictionary() {
         let result = "\(contactDictionary["0"]!)0"
-        print(result)
-        resOfFinTheFirConDic = result
+        resultOfFindingTheFirstContactDictionary = result
     }
     
     mutating func findTheLastContactArray() {
         let result = contactArray[contactArray.count-1]
-        print(result)
-        resOfFinTheLasConArr = result
+        resultOfFindingTheLastContactArray = result
     }
     
     mutating func findTheLastContactDictionary() {
         let result = "\(contactDictionary[String(contactDictionary.count-1)]!)\(contactDictionary.count-1)"
-        print(result)
-        resOfFinTheLasConDic = result
+        resultOfFindingTheLastContactDictionary = result
     }
     
     mutating func searchForANonExistingElementArray() {
@@ -66,7 +62,7 @@ struct DictionaryManipulator {
                 result = "Success!"
             }
         }
-        resOfSeaForANonExiEleArr = result
+        resultOfSearchingForANonExistingElementArray = result
     }
     
     mutating func searchForANonExistingElementDictionary() {
@@ -76,6 +72,6 @@ struct DictionaryManipulator {
                 result = "Success!"
             }
         }
-        resOfSeaForANonExiEleDic = result
+        resultOfSearchingForANonExistingElementDictionary = result
     }
 }

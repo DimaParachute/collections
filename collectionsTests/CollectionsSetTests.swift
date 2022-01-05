@@ -16,11 +16,11 @@ class CollectionsSetTests: XCTestCase {
         setManipulator.firstSet = ["a", "b"]
         setManipulator.secondSet = ["b"]
         setManipulator.matchingLetters()
-        XCTAssertEqual(setManipulator.resOfMatchingLetters, "b")
+        XCTAssertEqual(setManipulator.resultOfMatchingLetters, "b")
         setManipulator.notMatchingLetters()
-        XCTAssertEqual(setManipulator.resOfNotMatchingLetters, "a")
+        XCTAssertEqual(setManipulator.resultOfNotMatchingLetters, "a")
         setManipulator.notMatchingFromFirstTextField()
-        XCTAssertEqual(setManipulator.resOfNotMatchingFromFirstTF, "a")
+        XCTAssertEqual(setManipulator.resultOfNotMatchingLettersFromFirstTextField, "a")
     }
 
     func testPerformance() throws {

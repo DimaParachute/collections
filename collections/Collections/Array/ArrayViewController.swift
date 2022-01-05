@@ -26,6 +26,10 @@ class ArrayViewController: UIViewController {
         arrayCreatingActivityIndicator.isHidden = true
         executionTimeLabel.isHidden = true
         arrayManipulationOptionsCollection.isHidden = true
+        arrayCreationButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        arrayCreationButton.titleLabel?.minimumScaleFactor = 0.5
+        executionTimeLabel.adjustsFontSizeToFitWidth = true
+        executionTimeLabel.minimumScaleFactor = 0.5
     }
     
     @IBAction func createArrayButtonPressed(_ sender: Any) {
@@ -48,7 +52,7 @@ class ArrayViewController: UIViewController {
 
 extension ArrayViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayOperations.operationsCount
+        arrayOperations.operationsCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
